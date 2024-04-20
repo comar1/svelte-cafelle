@@ -140,7 +140,13 @@
         </tr>
     </table>
     <div class="">
-        <div class="md:hidden bg-purple mx-auto p-1 text-center text-white rounded-lg w-[7rem] h-[2rem] hover:cursor-pointer opacity-90 hover:opacity-100" on:click={addOrder}>+</div>
+        <div class="md:hidden bg-purple mx-auto p-1 text-center text-white rounded-lg w-[7rem] h-[2rem] hover:cursor-pointer opacity-90 hover:opacity-100" 
+            on:click={addOrder} 
+            on:keydown={(event) => { if (event.key === 'Enter') addOrder(); }} 
+            role="button" 
+            tabindex="0">
+            +
+        </div>
     </div>
 </div>
 
@@ -149,5 +155,6 @@
     background-color: #564787;
  }
  .bg-purple2 {
-    background-color: rgba(134, 110, 211, 0.922) }
+    background-color: rgba(134, 110, 211, 0.922) 
+}
 </style>
